@@ -1,0 +1,19 @@
+{
+  "name": "zero-union-fanin-repro",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node run-all.mjs",
+    "bug1": "node bug1-dropped-add.mjs",
+    "bug2": "node bug2-out-of-sync-rows.mjs",
+    "fuzz": "node fuzz.mjs",
+    "patch-pr6636": "node --no-warnings patch-pr6636.mjs"
+  },
+  "dependencies": {
+    "@rocicorp/zero": "1.9.0",
+    "zero-canary": "npm:@rocicorp/zero@1.11.0-canary.11"
+  }
+}
